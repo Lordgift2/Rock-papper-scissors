@@ -3,12 +3,10 @@ const selector=["papper","rock","scissors"];
    function getComputerChoice() {
    return(selector[Math.floor(Math.random()*selector.length)]);
    }
-const computerSelection=getComputerChoice();
-console.log(computerSelection);
-const playerSelection=selector[1];
-console.log(playerSelection);
+let computerSelection=getComputerChoice();
 function playRound(playerSelection,computerSelection){
-    if(playerSelection===computerSelection){
+    
+if (playerSelection===computerSelection){
         return("its a tie, play-again");
     }
     else if (
@@ -22,5 +20,17 @@ function playRound(playerSelection,computerSelection){
         return("you lose, computer win");
     }
     } 
-console.log(playRound(playerSelection,computerSelection));
+    const playerSelection=selector[1]
+function game(){
+    for (let i = 0; i < 5; i++) {
+    console.log(playRound(playerSelection,getComputerChoice()));
+    
+}
+}
+console.log(game());
 
+        
+              
+    
+
+    
