@@ -4,6 +4,7 @@ const selector=["papper","rock","scissors"];
    return(selector[Math.floor(Math.random()*selector.length)]);
    }
 let computerSelection=getComputerChoice();
+let playerSelection=prompt("whats your selector?","rock");
 function playRound(playerSelection,computerSelection){
     
 if (playerSelection===computerSelection){
@@ -20,9 +21,11 @@ if (playerSelection===computerSelection){
         return("you lose, computer win");
     }
     } 
-    const playerSelection=selector[1]
+    
 function game(){
     for (let i = 0; i < 5; i++) {
+        let playerSelection=prompt("whats your selector?","rock");
+    if (playerSelection===null){throw new Error('input selector');}
     console.log(playRound(playerSelection,getComputerChoice()));
     
 }
