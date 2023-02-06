@@ -4,7 +4,7 @@ const selector=["papper","rock","scissors"];
    return(selector[Math.floor(Math.random()*selector.length)]);
    }
 let computerSelection=getComputerChoice();
-let playerSelection=prompt("whats your selector?","rock");
+console.log ;
 function playRound(playerSelection,computerSelection){
     
 if (playerSelection===computerSelection){
@@ -24,7 +24,7 @@ if (playerSelection===computerSelection){
     
 function game(){
     for (let i = 0; i < 5; i++) {
-        let playerSelection=prompt("whats your selector?","rock");
+        playerSelection=prompt("whats your selector?","rock","scissors","papper")
     if (playerSelection===null){throw new Error('input selector');}
     console.log(playRound(playerSelection,getComputerChoice()));
     

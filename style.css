@@ -1,0 +1,8 @@
+html {box-sizing: border-box;width: auto; font-size: x-large;}
+button{
+    display: grid;
+    
+}
+.button{
+    display: flex; size: 10ex;
+}
