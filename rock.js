@@ -20,10 +20,18 @@ function playRound(playerSelection, computerSelection){
              computerSelection === selector[0]){
         return ('Computer win');
     }
-    else{
-        return('player win')
-    }
+    else if (playerSelection === selector[1] &&
+        computerSelection === selector[0] ||
+        playerSelection === selector[2] && 
+        computerSelection === selector[1] ||
+        playerSelection === selector[0] && 
+        computerSelection === selector[2]){
+    return('player win')
 }
+else{
+    return('invalid entries selected');
+}
+    }
 function game(){
     let playerSelection = (prompt('Enter selector'));
     let computerSelection = getComputerChoice(selector);
