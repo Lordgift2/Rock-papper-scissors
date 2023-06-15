@@ -1,39 +1,36 @@
-
-const selector=["papper","rock","scissors"]; 
-   function getComputerChoice() {
-   return(selector[Math.floor(Math.random()*selector.length)]);
-   }
-let computerSelection=getComputerChoice();
-console.log ;
-function playRound(playerSelection,computerSelection){
-    
-if (playerSelection===computerSelection){
-        return("its a tie, play-again");
+ function getComputerChoice(selector){
+    const computerChoice  =selector [Math.floor(Math.random()*selector.length)];
+        return computerChoice;
+}
+const selector = ['Rock','Papper','Scissors']
+function playRound(playerSelection, computerSelection){
+    if (playerSelection === selector[0] &&
+        computerSelection === selector[0]||
+        playerSelection === selector[1]&&
+        computerSelection===selector[1]||
+        playerSelection===selector[2]&&
+        computerSelection===selector[2]){
+        return ('It\'s a tie play again');
     }
-    else if (
-        playerSelection ===selector[1] && computerSelection ===selector[2] ||
-        playerSelection ===selector[2] && computerSelection ===selector[0] ||
-        playerSelection ===selector[0] && computerSelection ===selector[1] 
-    ){
-        return("you win this round! Good Job!");
+    else if (playerSelection === selector[0] &&
+             computerSelection === selector[1] ||
+             playerSelection === selector[1] && 
+             computerSelection === selector[2] ||
+             playerSelection === selector[2] && 
+             computerSelection === selector[0]){
+        return ('Computer win');
     }
     else{
-        return("you lose, computer win");
+        return('player win')
     }
-    } 
-    
+}
 function game(){
-    for (let i = 0; i < 5; i++) {
-        playerSelection=prompt("whats your selector?","rock","scissors","papper")
-    if (playerSelection===null){throw new Error('input selector');}
-    console.log(playRound(playerSelection,getComputerChoice()));
-    
+    let playerSelection = (prompt('Enter selector'));
+    let computerSelection = getComputerChoice(selector);
+    console.log(playerSelection);
+    console.log(computerSelection);
+   console.log(playRound(playerSelection,computerSelection));
 }
+for (let i = 0; i <5; i++) {
+game();
 }
-console.log(game());
-
-        
-              
-    
-
-    
