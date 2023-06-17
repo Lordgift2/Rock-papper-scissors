@@ -1,8 +1,14 @@
-html {box-sizing: border-box;width: auto; font-size: x-large;}
+html {box-sizing: border-box;width: auto; font-size: x-large;background-color: blue;}
 button{
     display: grid;
+    margin-right: 2ex;
     
 }
 .button{
     display: flex; size: 10ex;
 }
+.scoreboard{
+    display: flex; flex-direction:column;margin: 2ex; font-family: Arial, Helvetica, sans-serif;font-size: 20px;color: red;
+}
+.roundwinner {
+    display: flex; font-style: italic;  font-weight: bold; color:lime}
